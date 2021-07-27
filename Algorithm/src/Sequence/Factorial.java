@@ -1,4 +1,4 @@
-package Algorithm;
+package Sequence;
 
 //N!은 자연수 N에 대한 누승으로써 1부터 N까지의 곱을 말하며 팩토리얼이라고 함.
 //n! = (n-1)!*n 이라는 규칙을 가지고 있음.

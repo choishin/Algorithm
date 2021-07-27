@@ -1,4 +1,4 @@
-package Algorithm;
+package Sequence;
 //1. 등(차)비 수열은 각 항마다 일정한 값을 더하거나 곱하는 수열임. 
 public class ArithmeticSequence {
 	
