@@ -6,6 +6,7 @@
 package CodingDoJang;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
@@ -20,11 +21,11 @@ public class NumSort {
 				getSize();
 				List<Integer> oddNums = getOdd(size);
 				List<Integer> evenNums = getEven(size);
-				sortNum();
+				sortNum(oddNums, evenNums);
 
 			}
-
 			catch (Exception e) {
+				System.out.println(e);
 				System.out.println("Program is Over.");
 				break;
 			}
@@ -47,7 +48,11 @@ public class NumSort {
 					throw new Exception();
 				}
 			}
-
+			/* 
+			 * 여기서 시간이 제일 많이 걸렸음. InputMissmatchException의 경우 
+			 * getSize()로 나가게 만들면 -> stackoverflow 오류가 남.
+			 * 바로 scanner.nextInt() -> 안 먹음
+			 */
 		} catch (InputMismatchException ime) {
 			System.out.println("Please Input a number.");
 			throw new Exception();
@@ -109,8 +114,44 @@ public class NumSort {
 		}
 	}
 
-	private static void sortNum() {
+	private static void sortNum(List<Integer> oddNums, List<Integer> evenNums) {
+
+		System.out.println("변경전");
+		System.out.println("홀수배열");
+		for (int i=0; i<size; i++) {
+			if (i != size-1) {
+				System.out.print(oddNums.get(i)+",");
+			}
+			else {
+				System.out.print(oddNums.get(i));
+			}
+		}
+		System.out.println();
+		System.out.println("짝수배열");
+		for (int i=0; i<size; i++) {
+			if (i != size-1) {
+				System.out.print(evenNums.get(i)+",");
+			}
+			else {
+				System.out.print(evenNums.get(i));
+			}
+		}
+		System.out.println();
 		
+		Collections.sort(oddNums);
+		Collections.reverse(evenNums);
+		
+		System.out.println("변경후");
+		for (int i = 0; i <size; i++) {
+			System.out.print(oddNums.get(i)+"->");
+			if (i != size-1) {
+				System.out.print(evenNums.get(i)+"->");
+			}
+			else {
+				System.out.print(evenNums.get(i));
+			}
+		}
+		System.out.println();
 
 	}
 
