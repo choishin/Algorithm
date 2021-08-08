@@ -3,7 +3,7 @@
  * 순서는 홀-짝-홀-짝-...으로 오게 해야 하며, 홀수는 오름차순 정렬로, 짝수는 내림차순 정렬로 배치해야 합니다.
  */
 
-package test;
+package Lv2;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,7 +25,6 @@ public class NumSort {
 
 			}
 			catch (Exception e) {
-				System.out.println(e);
 				System.out.println("Program is Over.");
 				break;
 			}
