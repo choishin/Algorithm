@@ -1,8 +1,7 @@
 /*
- * ÀÚ¿¬¼ö ¸®½ºÆ®(È¦¼ö¿Í Â¦¼öÀÇ °³¼ö°¡ °°À½)°¡ ÁÖ¾îÁı´Ï´Ù.(¿¹¿Ü Ã³¸® ÇÊ¿ä) ÀÌ ¸®½ºÆ®¸¦ Á¤·ÄÇØ¾ß ÇÕ´Ï´Ù. 
- * ¼ø¼­´Â È¦-Â¦-È¦-Â¦-...À¸·Î ¿À°Ô ÇØ¾ß ÇÏ¸ç, È¦¼ö´Â ¿À¸§Â÷¼ø Á¤·Ä·Î, Â¦¼ö´Â ³»¸²Â÷¼ø Á¤·Ä·Î ¹èÄ¡ÇØ¾ß ÇÕ´Ï´Ù.
+ * ìì—°ìˆ˜ ë¦¬ìŠ¤íŠ¸(í™€ìˆ˜ì™€ ì§ìˆ˜ì˜ ê°œìˆ˜ê°€ ê°™ìŒ)ê°€ ì£¼ì–´ì§‘ë‹ˆë‹¤.(ì˜ˆì™¸ ì²˜ë¦¬ í•„ìš”) ì´ ë¦¬ìŠ¤íŠ¸ë¥¼ ì •ë ¬í•´ì•¼ í•©ë‹ˆë‹¤. 
+ * ìˆœì„œëŠ” í™€-ì§-í™€-ì§-...ìœ¼ë¡œ ì˜¤ê²Œ í•´ì•¼ í•˜ë©°, í™€ìˆ˜ëŠ” ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ë¡œ, ì§ìˆ˜ëŠ” ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬ë¡œ ë°°ì¹˜í•´ì•¼ í•©ë‹ˆë‹¤.
  */
-
 package Lv2;
 
 import java.util.ArrayList;
@@ -36,7 +35,7 @@ public class NumSort {
 		try {
 			System.out.println("Please Input a size of Number list (max : 10)");
 			size = scanner.nextInt();
-			// instanceof¸¦ »ç¿ëÇÏ±â À§ÇØ ¸¸µç Integer instance
+			// instanceofï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Integer instance
 			Integer value = new Integer(size);
 			if ((value instanceof Integer) && 1 <= size && size <= 10) {
 
@@ -48,9 +47,9 @@ public class NumSort {
 				}
 			}
 			/* 
-			 * ¿©±â¼­ ½Ã°£ÀÌ Á¦ÀÏ ¸¹ÀÌ °É·ÈÀ½. InputMissmatchExceptionÀÇ °æ¿ì 
-			 * getSize()·Î ³ª°¡°Ô ¸¸µé¸é -> stackoverflow ¿À·ù°¡ ³².
-			 * ¹Ù·Î scanner.nextInt() -> ¾È ¸ÔÀ½
+			 * ï¿½ï¿½ï¿½â¼­ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½É·ï¿½ï¿½ï¿½. InputMissmatchExceptionï¿½ï¿½ ï¿½ï¿½ï¿½ 
+			 * getSize()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ -> stackoverflow ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½.
+			 * ï¿½Ù·ï¿½ scanner.nextInt() -> ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			 */
 		} catch (InputMismatchException ime) {
 			System.out.println("Please Input a number.");
@@ -115,8 +114,8 @@ public class NumSort {
 
 	private static void sortNum(List<Integer> oddNums, List<Integer> evenNums) {
 
-		System.out.println("º¯°æÀü");
-		System.out.println("È¦¼ö¹è¿­");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		System.out.println("È¦ï¿½ï¿½ï¿½è¿­");
 		for (int i=0; i<size; i++) {
 			if (i != size-1) {
 				System.out.print(oddNums.get(i)+",");
@@ -126,7 +125,7 @@ public class NumSort {
 			}
 		}
 		System.out.println();
-		System.out.println("Â¦¼ö¹è¿­");
+		System.out.println("Â¦ï¿½ï¿½ï¿½è¿­");
 		for (int i=0; i<size; i++) {
 			if (i != size-1) {
 				System.out.print(evenNums.get(i)+",");
@@ -140,7 +139,7 @@ public class NumSort {
 		Collections.sort(oddNums);
 		Collections.reverse(evenNums);
 		
-		System.out.println("º¯°æÈÄ");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		for (int i = 0; i <size; i++) {
 			System.out.print(oddNums.get(i)+"->");
 			if (i != size-1) {

@@ -1,6 +1,6 @@
 /*
- * 1Â÷¿øÀÇ Á¡µéÀÌ ÁÖ¾îÁ³À» ¶§, ±× Áß °¡Àå °Å¸®°¡ ÂªÀº °ÍÀÇ ½ÖÀ» Ãâ·ÂÇÏ´Â ÇÔ¼ö¸¦ ÀÛ¼ºÇÏ½Ã¿À. (´Ü Á¡µéÀÇ ¹è¿­Àº ¸ğµÎ Á¤·ÄµÇ¾îÀÖ´Ù°í °¡Á¤ÇÑ´Ù.)
- * ¿¹¸¦µé¾î S={1, 3, 4, 8, 13, 17, 20} ÀÌ ÁÖ¾îÁ³´Ù¸é, °á°ú°ªÀº (3, 4)°¡ µÉ °ÍÀÌ´Ù.
+ * 1ì°¨ì›ì˜ ì ë“¤ì´ ì£¼ì–´ì¡Œì„ ë•Œ, ê·¸ ì¤‘ ê°€ì¥ ê±°ë¦¬ê°€ ì§§ì€ ê²ƒì˜ ìŒì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜ë¥¼ ì‘ì„±í•˜ì‹œì˜¤. (ë‹¨ ì ë“¤ì˜ ë°°ì—´ì€ ëª¨ë‘ ì •ë ¬ë˜ì–´ìˆë‹¤ê³  ê°€ì •í•œë‹¤.)
+ * ì˜ˆë¥¼ë“¤ì–´ S={1, 3, 4, 8, 13, 17, 20} ì´ ì£¼ì–´ì¡Œë‹¤ë©´, ê²°ê³¼ê°’ì€ (3, 4)ê°€ ë  ê²ƒì´ë‹¤.
  */
 package Lv2;
 
@@ -62,7 +62,7 @@ public class Comparator {
 				Double tmp2 = Double.parseDouble(Integer.toString(nums.get(j)));
 				Double b = Math.pow(tmp2, 2);
 				Double c = Math.sqrt(Math.abs(a - b));
-				System.out.println("°Å¸® : " + c);
+				System.out.println("ï¿½Å¸ï¿½ : " + c);
 				System.out.println("(" + tmp1 + "," + tmp2 + ")");
 
 				if (c != 0 && c < min) {
@@ -72,8 +72,8 @@ public class Comparator {
 				}
 			}
 		}
-		System.out.println("°á°ú");
-		System.out.println("ÃÖ´Ü°Å¸® : " + min);
+		System.out.println("ï¿½ï¿½ï¿½");
+		System.out.println("ï¿½Ö´Ü°Å¸ï¿½ : " + min);
 		System.out.println("(" + min_a + "," + min_b + ")");
 
 	}

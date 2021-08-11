@@ -1,8 +1,8 @@
 /*
- * ÀÚ±â ÀÚ½ÅÀ» Á¦¿ÜÇÑ ¸ðµç ¾çÀÇ ¾à¼öµéÀÇ ÇÕÀÌ ÀÚ±â ÀÚ½ÅÀÌ µÇ´Â ÀÚ¿¬¼ö¸¦ ¿ÏÀü¼ö¶ó°í ÇÑ´Ù. ¿¹¸¦ µé¸é, 6°ú 28Àº ¿ÏÀü¼öÀÌ´Ù. 
- * 6=1+2+3 // 1,2,3Àº °¢°¢ 6ÀÇ ¾à¼ö
- * 28=1+2+4+7+14 // 1,2,4,7,14´Â °¢°¢ 28ÀÇ ¾à¼ö
- * ÀÔ·ÂÀ¸·Î ÀÚ¿¬¼ö NÀ» ¹Þ°í, Ãâ·ÂÀ¸·Î N ÀÌÇÏÀÇ ¸ðµç ¿ÏÀü¼ö¸¦ Ãâ·ÂÇÏ´Â ÄÚµå¸¦ ÀÛ¼ºÇÏ¶ó.
+ * ìžê¸° ìžì‹ ì„ ì œì™¸í•œ ëª¨ë“  ì–‘ì˜ ì•½ìˆ˜ë“¤ì˜ í•©ì´ ìžê¸° ìžì‹ ì´ ë˜ëŠ” ìžì—°ìˆ˜ë¥¼ ì™„ì „ìˆ˜ë¼ê³  í•œë‹¤. ì˜ˆë¥¼ ë“¤ë©´, 6ê³¼ 28ì€ ì™„ì „ìˆ˜ì´ë‹¤. 
+ * 6=1+2+3 // 1,2,3ì€ ê°ê° 6ì˜ ì•½ìˆ˜
+ * 28=1+2+4+7+14 // 1,2,4,7,14ëŠ” ê°ê° 28ì˜ ì•½ìˆ˜
+ * ìž…ë ¥ìœ¼ë¡œ ìžì—°ìˆ˜ Nì„ ë°›ê³ , ì¶œë ¥ìœ¼ë¡œ N ì´í•˜ì˜ ëª¨ë“  ì™„ì „ìˆ˜ë¥¼ ì¶œë ¥í•˜ëŠ” ì½”ë“œë¥¼ ìž‘ì„±í•˜ë¼.
  */
 
 package Lv1;
@@ -59,8 +59,8 @@ public class PerfectNum {
 				sum = sum + factors.get(k);
 			} // for
 			if (i == sum) {
-				System.out.println("¿ÏÀü¼ö " + i);
-				System.out.print("¿ø¼Ò´Â ");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ " + i);
+				System.out.print("ï¿½ï¿½ï¿½Ò´ï¿½ ");
 				for (int m = 0; m < factors.size(); m++) {
 					if (m != factors.size() - 1) {
 						System.out.print(factors.get(m) + ",");

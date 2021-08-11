@@ -1,6 +1,6 @@
 /*
- * 10¹Ì¸¸ÀÇ ÀÚ¿¬¼ö¿¡¼­ 3°ú 5ÀÇ ¹è¼ö¸¦ ±¸ÇÏ¸é 3,5,6,9ÀÌ´Ù. ÀÌµéÀÇ ÃÑÇÕÀº 23ÀÌ´Ù.
- * 1000¹Ì¸¸ÀÇ ÀÚ¿¬¼ö¿¡¼­ 3,5ÀÇ ¹è¼öÀÇ ÃÑÇÕÀ» ±¸ÇÏ¶ó.
+ * 10ë¯¸ë§Œì˜ ìì—°ìˆ˜ì—ì„œ 3ê³¼ 5ì˜ ë°°ìˆ˜ë¥¼ êµ¬í•˜ë©´ 3,5,6,9ì´ë‹¤. ì´ë“¤ì˜ ì´í•©ì€ 23ì´ë‹¤.
+ * 1000ë¯¸ë§Œì˜ ìì—°ìˆ˜ì—ì„œ 3,5ì˜ ë°°ìˆ˜ì˜ ì´í•©ì„ êµ¬í•˜ë¼.
  */
 
 package Lv1;
@@ -54,7 +54,7 @@ public class MultiplesOf {
 
 	private static List<Integer> findMulOf(int mulNum) {
 
-		System.out.println(num + "±îÁöÀÇ ¼ö¿¡¼­" + mulNum + "ÀÇ ¹è¼ö´Â");
+		System.out.println(num + "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + mulNum + "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½");
 		List<Integer> mulNumList = new ArrayList<Integer>();
 		int sum = 0;
 		for (int i = 1; i <= num; i++) {
@@ -66,7 +66,7 @@ public class MultiplesOf {
 
 		}
 		System.out.println();
-		System.out.print(mulNum + "ÀÇ ÃÑÇÕÀº ");
+		System.out.print(mulNum + "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ");
 		System.out.println(sum);
 
 		return mulNumList;
@@ -75,8 +75,8 @@ public class MultiplesOf {
 
 	private static void getResult(List<Integer> first, List<Integer> second) {
 
-		System.out.println("Áßº¹µÈ ¼ö ");
-		// Áßº¹µÇ´Â ¼ıÀÚ´Â Áö¿ì±â
+		System.out.println("ï¿½ßºï¿½ï¿½ï¿½ ï¿½ï¿½ ");
+		// ï¿½ßºï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½Ú´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 		for (int i = 0; i < first.size(); i++) {
 			for (int j = 0; j < second.size(); j++) {
 				if (first.get(i) == second.get(j)) {
@@ -96,7 +96,7 @@ public class MultiplesOf {
 			sum = sum + second.get(i);
 		}
 
-		System.out.print(num + "±îÁöÀÇ ");
+		System.out.print(num + "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ");
 		for (int i = 0; i < mulNums.length; i++) {
 			if (i != mulNums.length - 1) {
 				System.out.print(mulNums[i] + ",");
@@ -104,7 +104,7 @@ public class MultiplesOf {
 				System.out.print(mulNums[i]);
 			}
 		}
-		System.out.print(" ÃÑÇÕ");
+		System.out.print(" ï¿½ï¿½ï¿½ï¿½");
 		System.out.println();
 		System.out.println(sum);
 
