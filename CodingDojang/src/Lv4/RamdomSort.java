@@ -32,17 +32,17 @@ class RandomMachine {
 			System.out.println("If you want to run the Progam, Press Y or Yes.");
 			Scanner scanner = new Scanner(System.in);
 			String input = scanner.next();
+			scanner.close();
 			if (!input.equalsIgnoreCase("y") && !input.equalsIgnoreCase("yes")) {
 				throw new Exception();
 			}
 		} catch (Exception e) {
 			getInput();
 		}
-
 	}
 
 	void generateRandomArray() {
-		//Radom숫자를 array에 넣는데 이미 그 값이 존재하면 건너뛴다.
+		//Radom숫자를 무한대로 작성해서 array에 넣는데 이미 그 값이 존재하면 건너뛴다.
 		List<Integer> randomNumbers = new ArrayList<Integer>();
 		while(true) {
 			int randomNum = (int)(Math.random()*9)+1;
@@ -63,6 +63,7 @@ class RandomMachine {
 
 	boolean isSame(List<Integer>sortedNumbers, int randomNum) {
 		for (int i = 0; i < sortedNumbers.size(); i++) {
+			//이 조건이 아니면 모두 false를 넘기게
 			if (sortedNumbers.get(i) == randomNum) {
 				return true;
 			}
