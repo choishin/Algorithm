@@ -23,6 +23,7 @@ public class RecommandingdId {
 
 			} catch (Exception e) {
 				System.out.println("처음부터 다시 시작합니다.");
+				System.out.println(e);			
 				new_id = "";
 				main(args);
 			}
@@ -113,11 +114,10 @@ class RecommandingMachine {
 			new_id = new_id_sb.toString();
 		}
 
-
 		new_id_clean = new ArrayList<Character>();
 		if (new_id.endsWith(".")) {
 			for (int i = 0; i < new_id_arr.length; i++) {
-				if (new_id_arr[i] == '.' && i == new_id.length()-1) {
+				if (new_id_arr[i] == '.' && i == new_id.length() - 1) {
 					continue;
 				} else {
 					new_id_clean.add(new_id_arr[i]);
@@ -130,14 +130,14 @@ class RecommandingMachine {
 			new_id = new_id_sb.toString();
 
 		}
-
 		return new_id;
 
 	}
 
 	String spaceToA(String new_id) {
-		if (new_id.contains(" ")) {
-			new_id = new_id.replace(" ", "a");
+		if (new_id.length() == 0) {
+			StringBuilder new_id_sb = new StringBuilder();
+			new_id = new_id_sb.append("a").toString();
 		}
 		return new_id;
 
@@ -152,7 +152,7 @@ class RecommandingMachine {
 		List<Character> new_id_clean = new ArrayList<Character>();
 		if (new_id.endsWith(".")) {
 			for (int i = 0; i < new_id_arr.length; i++) {
-				if (new_id_arr[i] == '.' && i == new_id.length()-1) {
+				if (new_id_arr[i] == '.' && i == new_id.length() - 1) {
 					continue;
 				} else {
 					new_id_clean.add(new_id_arr[i]);
@@ -167,9 +167,16 @@ class RecommandingMachine {
 		}
 		
 		if (new_id.length() < 3) {
-			
-		}
+			new_id_arr = new_id.toCharArray();
+			while (true) {
+				new_id = new_id.concat(String.valueOf(new_id_arr[new_id_arr.length-1]));
 
+				if (new_id.length() == 3) {
+					break;
+				}
+			}
+
+		}
 		return new_id;
 
 	}
