@@ -1,56 +1,23 @@
-package Level1;
+package Level1.recommandingId.myanswer;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-public class RecommandingdId {
-
-	public static void main(String[] args) throws Exception {
-		RecommandingMachine machine = new RecommandingMachine();
-		String new_id = "";
-		while (true) {
-			try {
-				new_id = machine.getId();
-				new_id = machine.changeBigLetter(new_id);
-				new_id = machine.removeSpecialChar(new_id);
-				new_id = machine.removeDoubleSpot(new_id);
-				new_id = machine.removeSpot(new_id);
-				new_id = machine.spaceToA(new_id);
-				new_id = machine.judgeIdLength(new_id);
-
-				System.out.println("사용 가능 아이디 : " + new_id);
-
-			} catch (Exception e) {
-				System.out.println("처음부터 다시 시작합니다.");
-				System.out.println(e);			
-				new_id = "";
-				main(args);
-			}
-
-		}
-	}
-}
-
-class RecommandingMachine {
-
-	String getId() {
-		String new_id = "";
-		try {
-			System.out.println("아이디를 입력해 주세요.");
-			Scanner scanner = new Scanner(System.in);
-			new_id = scanner.next();
-			if (new_id.length() < 2) {
+class Solution {
+	
+	public String solution(String new_id) throws Exception {
+			String answer = new_id;		
+			if (answer.length() < 2) {
 				throw new Exception();
 			}
-		} catch (Exception e) {
-			System.out.println("아이디의 길이는 3자 이상 15자 이하여야 합니다.");
-			new_id = "";
-			throw new Exception();
-
-		} finally {
-			return new_id;
-		}
+			answer = changeBigLetter(answer);
+			answer = removeSpecialChar(answer);
+			answer = removeDoubleSpot(answer);
+			answer = removeSpot(answer);
+			answer = spaceToA(answer);
+			answer = judgeIdLength(answer);
+			
+			return answer;		
 	}
 
 	String changeBigLetter(String new_id) {
@@ -129,7 +96,7 @@ class RecommandingMachine {
 			}
 			new_id = new_id_sb.toString();
 
-		}
+		};
 		return new_id;
 
 	}
@@ -170,7 +137,6 @@ class RecommandingMachine {
 			new_id_arr = new_id.toCharArray();
 			while (true) {
 				new_id = new_id.concat(String.valueOf(new_id_arr[new_id_arr.length-1]));
-
 				if (new_id.length() == 3) {
 					break;
 				}
